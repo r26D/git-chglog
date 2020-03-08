@@ -17,6 +17,7 @@ type CLIContext struct {
 	Query            string
 	NextTag          string
 	TagFilterPattern string
+	Paths            []string
 }
 
 // InitContext ...

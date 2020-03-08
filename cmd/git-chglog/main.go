@@ -76,6 +76,12 @@ func CreateApp(actionFunc cli.ActionFunc) *cli.App {
 			Usage: "generate the git-chglog configuration file in interactive",
 		},
 
+		// path
+		cli.StringSliceFlag{
+			Name:  "path",
+			Usage: "Paths to include in changelog",
+		},
+
 		// config
 		cli.StringFlag{
 			Name:  "config, c",
@@ -116,8 +122,8 @@ func CreateApp(actionFunc cli.ActionFunc) *cli.App {
 
 		// tag-filter-pattern
 		cli.StringFlag{
-			Name:   "tag-filter-pattern, p",
-			Usage:  "Regular expression of tag filter. Is specified, only matched tags will be picked",
+			Name:  "tag-filter-pattern, p",
+			Usage: "Regular expression of tag filter. Is specified, only matched tags will be picked",
 		},
 
 		// help & version
@@ -172,7 +178,9 @@ func AppAction(c *cli.Context) error {
 			NoEmoji:    c.Bool("no-emoji"),
 			Query:      c.Args().First(),
 			NextTag:    c.String("next-tag"),
+
 			TagFilterPattern: c.String("tag-filter-pattern"),
+			Paths:            c.StringSlice("path"),
 		},
 		fs,
 		NewConfigLoader(),
