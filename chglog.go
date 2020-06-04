@@ -25,6 +25,7 @@ type Options struct {
 	CommitSortBy         string              // Property name to use for sorting `Commit` (e.g. `Scope`)
 	CommitGroupBy        string              // Property name of `Commit` to be grouped into `CommitGroup` (e.g. `Type`)
 	CommitGroupSortBy    string              // Property name to use for sorting `CommitGroup` (e.g. `Title`)
+	CommitGroupTitleOrder []string            // Predefined sorted list of titles to use for sorting `CommitGroup`. Only if `CommitGroupSortBy` is `Custom`
 	CommitGroupTitleMaps map[string]string   // Map for `CommitGroup` title conversion
 	HeaderPattern        string              // A regular expression to use for parsing the commit header
 	HeaderPatternMaps    []string            // A rule for mapping the result of `HeaderPattern` to the property of `Commit`
