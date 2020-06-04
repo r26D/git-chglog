@@ -10,11 +10,11 @@ clean:
 
 .PHONY: bulid
 build:
-	go build -i -o git-chglog
+	go build -o git-chglog github.com/git-chglog/git-chglog/cmd/git-chglog
 
 .PHONY: test
 test:
-	go test -v `go list ./...`
+	go test -v ./...
 
 .PHONY: coverage
 coverage:
