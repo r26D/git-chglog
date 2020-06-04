@@ -2,11 +2,11 @@
 
 ![git-chglog](https://raw.githubusercontent.com/git-chglog/artwork/master/repo-banner%402x.png)
 
-[![godoc.org](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/git-chglog/git-chglog)
+[![godoc.org](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/r26D/git-chglog)
 [![Travis](https://img.shields.io/travis/git-chglog/git-chglog.svg?style=flat-square)](https://travis-ci.org/git-chglog/git-chglog)
 [![AppVeyor](https://img.shields.io/appveyor/ci/tsuyoshiwada/git-chglog/master.svg?style=flat-square)](https://ci.appveyor.com/project/tsuyoshiwada/git-chglog/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/github/git-chglog/git-chglog.svg?style=flat-square)](https://coveralls.io/github/git-chglog/git-chglog?branch=master)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/git-chglog/git-chglog/blob/master/LICENSE)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/r26D/git-chglog/blob/master/LICENSE)
 
 > CHANGELOG generator implemented in Go (Golang).  
 > _Anytime, anywhere, Write your CHANGELOG._
@@ -90,12 +90,12 @@ $ scoop install git-chglog
 #### Go users
 
 ```bash
-$ go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
+$ go get -u github.com/r26D/git-chglog/cmd/git-chglog
 ```
 
 ---
 
-If you are using another platform, you can download a binary from the [releases page](https://github.com/git-chglog/git-chglog/releases) and place it in a directory in your `$PATH`.
+If you are using another platform, you can download a binary from the [releases page](https://github.com/r26D/git-chglog/releases) and place it in a directory in your `$PATH`.
 
 
 ### Test Installation
@@ -226,7 +226,7 @@ style: ""
 template: CHANGELOG.tpl.md
 info:
   title: CHANGELOG
-  repository_url: https://github.com/git-chglog/git-chglog
+  repository_url: https://github.com/r26D/git-chglog
 
 options:
   tag_filter_pattern: '^v'
@@ -319,7 +319,7 @@ Options concerning the acquisition and sort of commits.
 | Key       | Required | Type        | Default   | Description                                                                                                         |
 |:----------|:---------|:------------|:----------|:--------------------------------------------------------------------------------------------------------------------|
 | `filters` | N        | Map in List | none      | Filter by using `Commit` properties and values. Filtering is not done by specifying an empty value.                 |
-| `sort_by` | N        | String      | `"Scope"` | Property name to use for sorting `Commit`. See [Commit](https://godoc.org/github.com/git-chglog/git-chglog#Commit). |
+| `sort_by` | N        | String      | `"Scope"` | Property name to use for sorting `Commit`. See [Commit](https://godoc.org/github.com/r26D/git-chglog#Commit). |
 | `multiline_commits:` | N       | Bool      | `false` | Allows for commit body parsing to find change log entries. |
 
 #### `options.commit_groups`
@@ -529,14 +529,14 @@ We alway welcome your contributions :clap:
 
 ### Development
 
-1. Fork (https://github.com/git-chglog/git-chglog) :tada:
+1. Fork (https://github.com/r26D/git-chglog) :tada:
 1. Create a feature branch :coffee:
 1. Run test suite with the `$ make test` command and confirm that it passes :zap:
 1. Commit your changes :memo:
 1. Rebase your local changes against the `master` branch :bulb:
 1. Create new Pull Request :love_letter:
 
-Bugs, feature requests and comments are more than welcome in the [issues](https://github.com/git-chglog/git-chglog/issues).
+Bugs, feature requests and comments are more than welcome in the [issues](https://github.com/r26D/git-chglog/issues).
 
 ### Feedback
 
@@ -552,13 +552,13 @@ See [CHANGELOG.md](./CHANGELOG.md)
 
 ## Related Projects
 
-* [git-chglog/artwork](https://github.com/git-chglog/artwork) - Assets for `git-chglog`.
+* [git-chglog/artwork](https://github.com/r26D/artwork) - Assets for `git-chglog`.
 
 ## License
 
 [MIT © tsuyoshiwada](./LICENSE)
 
-[doc-commit]: https://godoc.org/github.com/git-chglog/git-chglog#Commit
-[doc-commit-group]: https://godoc.org/github.com/git-chglog/git-chglog#CommitGroup
-[doc-ref]: https://godoc.org/github.com/git-chglog/git-chglog#Ref
-[doc-render-data]: https://godoc.org/github.com/git-chglog/git-chglog#RenderData
+[doc-commit]: https://godoc.org/github.com/r26D/git-chglog#Commit
+[doc-commit-group]: https://godoc.org/github.com/r26D/git-chglog#CommitGroup
+[doc-ref]: https://godoc.org/github.com/r26D/git-chglog#Ref
+[doc-render-data]: https://godoc.org/github.com/r26D/git-chglog#RenderData
